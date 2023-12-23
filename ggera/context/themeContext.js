@@ -6,12 +6,10 @@ const ThemeContext = createContext()
 export const ThemeProvider = ({children}) => {
 	const [theme, setTheme] = useState(0)
 	const currentTheme = themes[theme]
-	console.log(themes[theme])
-
   return (
     <ThemeContext.Provider value={currentTheme}>
 			{children}
-		</ThemeContext.Provider>
+	</ThemeContext.Provider>
   )
 }
 
