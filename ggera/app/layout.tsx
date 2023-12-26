@@ -8,9 +8,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-      <div>
-        <NavBar/>
-        {children}
-      </div>
+    <>
+    <NavBar />
+    {children}
+  </>   
   )
 }

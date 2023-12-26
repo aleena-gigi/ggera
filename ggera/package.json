@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "next": "13.5.3",
+    "next-auth": "^4.20.1",
+    "next-redux-wrapper": "^8.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-final-form": "^6.5.9",
+    "react-helmet-async": "^1.3.0",
+    "react-native-web": "^0.18.10",
+    "react-no-ssr": "^1.1.0",
+    "react-redux": "^8.0.2",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "typescript": "latest",
