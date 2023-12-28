@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   padding-right: 64px;
   border-bottom: 1px solid #333;
   height: 88px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: black;
   align-items: center;
   &> button{
     border-radius: 10px;
@@ -38,7 +42,7 @@ const Nav= styled.div`
   `
 
 const NavBar = () => {
-    const navBarElements = ['Play with a Pro', 'Hangout', 'About', 'Blog', 'Job']
+  const navBarElements = ['Play with a Pro', 'Hangout', 'About', 'Blog', 'Job']
   return (
     <Wrapper>
       <Nav classname="shadow-xl bg-white">
