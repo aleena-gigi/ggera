@@ -24,6 +24,11 @@
     height: 41px;
     flex-shrink: 0;
 }
+.playerCard .container button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+}
 
 .whiteCard{
     width: 485px;
@@ -41,6 +46,11 @@
     border-radius: 10px;
     border: 1px solid #F15232;
     line-height: normal
+}
+.whiteCard button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
 }
 
 .game{
@@ -81,8 +91,8 @@
     justify-content: center;
     align-items: center;
   }
-
-  .profile{
+ 
+.profile{
     display: flex;
     padding-top: 38px;
 }
@@ -165,6 +175,11 @@
     right: 14%;
     /* DISPLAY: INLINE-BLOCK; */
     margin-left: -71px;
+}
+.premade button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
 }
 .partyOwner{
     padding: 41px 26px;

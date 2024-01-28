@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Icon } from '@iconify/react';
@@ -8,6 +9,7 @@ import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useRouter } from 'next/navigation';
 
 
 
@@ -37,6 +39,7 @@ const Box= styled.div `
   }
 `
 export default function Home() {
+  const router = useRouter();
   // Define the sliderSettings variable
   const sliderSettings = {
     infinite: true,
@@ -49,6 +52,14 @@ export default function Home() {
   const [selectedGame, setSelectedGame] = useState('valorant') 
   const handleButtonClick = (game) => {
     setSelectedGame(game)
+  }
+  const handleClick = () => {
+    router.push('https://gaming.ggera.com/login')
+  }
+  const handleLoginBtn = () => {
+    if(!currentUser) {
+      router.push('/login')
+    }
   }
   useEffect(() => { console.log(selectedGame) }, [selectedGame])
   return (
@@ -71,7 +82,7 @@ export default function Home() {
           <div className={styles.container}>
             <div style={{ fontSize: '24px', lineHeight:'normal'}}>Play with Pros</div>
             <div style={{ fontSize: '16px', fontWeight: '400', lineHeight: 'normal', padding: '8px 0px 17px'}}>Enhance your skills, triumph, and immerse yourself in the ultimate emotions of your favorite game.</div>
-            <button className={styles.button}>Play Now</button>
+            <button className={styles.button} onClick={() => {handleClick()}}>Play Now</button>
           </div>
         </div>
         <div className={styles.whiteCard}>
@@ -81,7 +92,7 @@ export default function Home() {
             <Icon icon="solar:gamepad-outline" color="rgba(0, 0, 0, 0.5019607843137255)" width={'60'} height={'43'} style={{ margin: 'auto' }}/>
           </div>
           <div style={{ fontSize: '24px', color: 'black', lineHeight: '34px', padding: '24px 60px'}}>Attain gaming excellence. Begin your journey today!</div>
-          <button className={styles.button}> Learn More</button>
+          <button className={styles.button} onClick={() => {handleClick()}}> Learn More</button>
         </div>
       </div>
       <div className={styles.game}>
@@ -151,7 +162,7 @@ export default function Home() {
           <div>Free Slot</div>
           <Image src="/profiles/profile7.svg" width={134} height={134}/>
         </div>
-        <button style={{ borderRadius: '10px',background: '#F15232' }}>Join the party $12/1 hour</button>
+        <button style={{ borderRadius: '10px',background: '#F15232' }} onClick={() => {handleClick()}}>Join the party $12/1 hour</button>
       </div>
 
       {/* PREMADE PARTY 2 */}
@@ -191,7 +202,7 @@ export default function Home() {
           <div>Free Slot</div>
           <Image src="/profiles/profile7.svg" width={134} height={134}/>
         </div>
-        <button style={{ borderRadius: '10px',background: '#F15232' }}>Join the party $12/1 hour</button>
+        <button style={{ borderRadius: '10px',background: '#F15232' }} onClick={() => {handleClick()}}>Join the party $12/1 hour</button>
       </div>
       
       

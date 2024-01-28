@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Wrapper = styled.div`
   height: 88px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   background: black;
   align-items: center;
   &> button{
@@ -20,6 +21,11 @@ const Wrapper = styled.div`
     height: 41px;
     color: #F15232;
   }
+  &>button: hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+  }
 `
 const Nav= styled.div`
   display: flex;
@@ -27,11 +33,16 @@ const Nav= styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  gap: 35px;
   &>button{
-    padding-right: 39px;
+    height: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   &>button: hover{
-    background: white;
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
   }
   &>img{
     width: 60px;
@@ -42,7 +53,11 @@ const Nav= styled.div`
   `
 
 const NavBar = () => {
+  const router = useRouter()
   const navBarElements = ['Play with a Pro', 'Hangout', 'About', 'Blog', 'Job']
+  const handleClick = () => {
+    router.push('https://gaming.ggera.com/login')
+  }
   return (
     <Wrapper>
       <Nav classname="shadow-xl bg-white">
@@ -51,7 +66,7 @@ const NavBar = () => {
           <button key={index}>{element}</button>
           ))}
       </Nav>
-      <button >Login</button>
+      <button onClick={() => { handleClick() }}>Login</button>
     </Wrapper>
   )
 }

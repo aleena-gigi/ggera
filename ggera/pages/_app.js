@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 import RootLayout from '../app/layout'
 import NoSSR from 'react-no-ssr';
