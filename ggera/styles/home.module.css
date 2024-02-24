@@ -1,0 +1,188 @@
+.playerCard{
+    position: relative;
+    text-align: start;
+}
+.playerCard .container{
+    border-radius:  0px 0px 10px 10px;
+    height: 183px;
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 12px 20px; /* Some padding */
+}
+.playerCard .container button{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    color: #F15232;
+    border-radius: 10px;
+    border: 1px solid #F15232;
+    width: 113px;
+    height: 41px;
+    flex-shrink: 0;
+}
+.playerCard .container button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+}
+
+.whiteCard{
+    width: 485px;
+    height: 509px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 56px 51px;
+}
+.whiteCard button{
+    width: 132px;
+    height: 41px;
+    color: #F15232;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #F15232;
+    line-height: normal
+}
+.whiteCard button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+}
+
+.game{
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.game button{
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    background: #333333;
+    width: 193px;
+    height: 100px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+}
+.transparentButton {
+    background: transparent !important;
+    display: inline-block !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    margin-left: -30px;
+    flex-shrink: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+.profile{
+    display: flex;
+    padding-top: 38px;
+}
+
+.profile button:hover{
+    border-radius: 67px;
+    border: 1px solid #FFF;
+    background: #333;
+}
+.profile > img{
+    margin-left: -5px;
+    position: relative;
+    z-index: 2;
+    top: 10px;
+    right: 25px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.premade{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    font-size: 16px;
+    gap: 18px;
+    text-align: center;
+    width: 1032px;
+    height: 886px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #333;
+    margin-top: 63px;
+}
+.premade > iframe{
+    padding-top: 19px;
+}
+.premade .slotsTag{
+    color: #000;
+    width: 104px;
+    height: fit-content;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 5px;
+    background: #FFF;
+}
+.premade .slots{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+.premade .slots > div{
+    width: 318px;
+    height: 232px;
+    flex-shrink: 0;
+    display: grid;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background:  #333;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+}
+
+.premade .slots > img{
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    position: relative;
+    top: -113px;
+    right: 14%;
+    /* DISPLAY: INLINE-BLOCK; */
+    margin-left: -71px;
+}
+.premade button:hover{
+    border-radius: 10px;
+    border: 1px solid #FFF;
+    background: #333;
+}
+.partyOwner{
+    padding: 41px 26px;
+    display: flex;
+    flex-direction: column;
+}
