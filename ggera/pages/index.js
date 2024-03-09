@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import { Icon } from '@iconify/react';
+import 'iconify-icon';
 import styles from '../styles/Home.module.css'
 import { useEffect, useState } from 'react';
 // Import the necessary components and styles
@@ -10,21 +11,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRouter } from 'next/navigation';
+import { Wrapper } from '../styles/styledComponents';
+import MainHeading from '../components/MainHeading';
 
 
 
-const Wrapper = styled.div `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 70px; 
-  padding: 133px 250px;
-`
 const Box= styled.div `
   gap: 10px;
   align-items: center;
@@ -64,15 +55,9 @@ export default function Home() {
   useEffect(() => { console.log(selectedGame) }, [selectedGame])
   return (
     <Wrapper>
-      <div style={{
-        textAlign: 'center',
-        color: '#F15232',
-        fontSize: '66px',
-        fontWeight: 900,
-        lineHeight: '70px'}}
-      >
-        Elevate your gaming experience to the next level
-      </div>
+      <MainHeading
+        text={"Elevate your gaming experience to the next level"}
+      />
       <div>
         Join us now and step into a world where only the best compete.
       </div>

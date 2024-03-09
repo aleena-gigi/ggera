@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import styled from 'styled-components';
-const Wrapper = styled.div`
+const NavBarWrapper = styled.div`
   display: flex;
   padding-left: 64px;
   padding-right: 64px;
@@ -54,20 +54,31 @@ const Nav= styled.div`
 
 const NavBar = () => {
   const router = useRouter()
-  const navBarElements = ['Play with a Pro', 'Hangout', 'About', 'Blog', 'Job']
+  const navBarElements = [
+  { name: 'Play with a Pro', path: '/play' },
+  { name: 'Hangout', path: '/hangout' },
+  { name: 'About', path: '/about' },
+  { name: 'Blog', path: '/blog' },
+  { name: 'Job', path: '/job' }
+]
+
+const handleClickNavBar = (path) => {
+  console.log('handign')
+  router.push(path)
+}
   const handleClick = () => {
     router.push('https://gaming.ggera.com/login')
   }
   return (
-    <Wrapper>
+    <NavBarWrapper>
       <Nav classname="shadow-xl bg-white">
       <Image src="/logo.png" alt="logo" width="60" height="41" />
         {navBarElements.map((element, index) => (
-          <button key={index}>{element}</button>
+          <button key={index} onClick={() => handleClickNavBar(element.path)}>{element.name}</button>
           ))}
       </Nav>
       <button onClick={() => { handleClick() }}>Login</button>
-    </Wrapper>
+    </NavBarWrapper>
   )
 }
 
