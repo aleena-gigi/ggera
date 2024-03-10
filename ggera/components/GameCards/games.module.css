@@ -1,0 +1,62 @@
+.list li {
+  list-style-type: none;
+  position: relative;
+  padding-bottom: 9px;
+  font-weight: 400;
+}
+  
+.list li:before {
+  content: "\25BA \0020";
+  font-size: 16px;
+  color: white;
+  top: 5px;
+  left: -10px;
+}
+
+.gameCard {
+  width: 244px;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  background: #333333;
+  padding: 40px 15px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  text-align: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.gameCard:hover{
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  background: #F15232;
+}
+
+/* Makes button visible only upon hovering */
+.gameCard .button {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: #F15232;
+  background: #FFF;
+  border-radius: 10px;
+  width: 113px;
+  height: 41px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gameCard:hover .button {
+  opacity: 1;
+}
+.gameCard:hover .button:hover {
+  border-radius: 10px;
+  border: 1px solid #FFF;
+  background: #333;
+}

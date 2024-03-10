@@ -12,8 +12,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useRouter } from 'next/navigation';
 import { Wrapper } from '../styles/styledComponents';
-import MainHeading from '../components/MainHeading';
-
+import MainHeading from '../components/Headings/MainHeading';
+import MainDescription from '../components/MainDescription';
+import SubHeading, { SubHeadingBody } from '../components/Headings/SubHeading';
+import PlayerCardWrapper from '../components/PlayerCards/PlayerCardWrapper';
 
 
 const Box= styled.div `
@@ -58,10 +60,10 @@ export default function Home() {
       <MainHeading
         text={"Elevate your gaming experience to the next level"}
       />
-      <div>
-        Join us now and step into a world where only the best compete.
-      </div>
-      <div style={{ display: 'flex', gap: '16px', marginTop: '38px', marginBottom: '20px'}}>
+      <MainDescription
+        text={"Join us now and step into a world where only the best compete."}
+      />
+      <PlayerCardWrapper>
         <div className={styles.playerCard}>
           <Image src="/playerCard.png" alt="logo" width="509" height="485" />
           <div className={styles.container}>
@@ -79,7 +81,7 @@ export default function Home() {
           <div style={{ fontSize: '24px', color: 'black', lineHeight: '34px', padding: '24px 60px'}}>Attain gaming excellence. Begin your journey today!</div>
           <button className={styles.button} onClick={() => {handleClick()}}> Learn More</button>
         </div>
-      </div>
+      </PlayerCardWrapper>
       <div className={styles.game}>
         <button style={{background: '#F15232'}} >Select Your Game</button>
         <button onClick={() => { handleButtonClick('valorant') }}><Image src="/Valorant_logo.svg" alt="Valorant logo" width={110} height={16} /></button>
@@ -89,8 +91,7 @@ export default function Home() {
         </button>
         <button className={styles.transparentButton}><Image src="/rightarrow.svg" alt="go right" width={30} height={30} /></button>
       </div>
-      <div style={{ fontSize: '48px', fontWeight: 600, paddingTop: '93px'}}>Book your 1-1 Session</div>
-      <div style={{ fontWeight: '400', fontSize: '16px', paddingTop: '20px', lineHeight: 'normal', width: '551px'}}>Elevate your skills with personalized 1-1 coaching. Book now to unlock your gaming potential and achieve extraordinary results.</div>
+      <SubHeading text={"Book your 1-1 Session"} description={"Elevate your skills with personalized 1-1 coaching. Book now to unlock your gaming potential and achieve extraordinary results."} />
       <div className={styles.profile}>
         <button><Image src="/profiles/profile2.svg" width={134} height={134}/></button>
         <Image src="/profiles/active.svg" width={16} height={16}/>
