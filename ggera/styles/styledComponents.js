@@ -10,5 +10,5 @@ export const Wrapper = styled.div`
     font-style: normal;
     font-weight: 500;
     line-height: 70px; 
-    padding: 133px 250px;
+    padding: 133px 250px 30px;
 `

@@ -15,9 +15,10 @@ const Wrapper = styled.div`
 const GameCardList = ({gameList}: GameListProps) => {
 return (
   <Wrapper>
-    {gameList.map((game: GameCardsProps) => {
+    {gameList.map((game: GameCardsProps, index) => {
       return (
         <GameCard
+          key={index}
           gameRedirectRoute={game.gameRedirectRoute}
           imageSrc={game.imageSrc}
           alt={game.alt}

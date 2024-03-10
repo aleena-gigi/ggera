@@ -2,6 +2,9 @@
     position: relative;
     text-align: start;
 }
+.playerCard img{
+    width: 100%;
+}
 .playerCard .container{
     border-radius:  0px 0px 10px 10px;
     height: 183px;

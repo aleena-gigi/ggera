@@ -135,11 +135,12 @@ export default function Home() {
             <Box>
               <div><span style={{color: '#F15232'}}>Country</span> Lebanon</div>
               <div><span style={{color: '#F15232', paddingRight: '8px'}}>KD </span> 5</div>
-              <div style={{display: 'inline-flex'}}>955 
+              <div style={{display: 'inline-flex'}}>955 orders
                 <span style={{ paddingLeft: '9px', paddingRight: '3px' }}>
                   <Image src={"/star.svg"} height={18} width={18}/>
                 </span>
-                orders</div>
+                5
+                </div>
             </Box>
           </div>
           <Image src="/profiles/profile7.svg" width={134} height={134}/>

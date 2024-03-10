@@ -8,12 +8,14 @@ import PlayerCardWrapper from '../../components/PlayerCards/PlayerCardWrapper'
 import SubHeading from '../../components/Headings/SubHeading'
 import GameCardList from '../../components/GameCards'
 import GameCards, { GameCardsProps } from '../../components/GameCards/GameCard'
+import PlayerAdList from '@/components/PlayerAd'
+import { PlayerAdCardProps } from '@/components/PlayerAd/PlayerAdCard'
+import Ad from '@/components/GGeraAd'
 
 const FlexWrapper = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 38px;
-  margin-bottom: 20px;
   & div:first-child {
     padding-right: 16px;
     border-right: 1px solid white;
@@ -27,6 +29,11 @@ const index = () => {
     { imageSrc: "/COD.svg", alt: "COD", gameRedirectRoute: "/cod" },
     { imageSrc: "/fortnite.svg", alt: "Fortnite", gameRedirectRoute: "/fortnite" },
     { imageSrc: "/apex.svg", alt: "Apex", gameRedirectRoute: "/apex" },
+  ]
+  const playersList: PlayerAdCardProps[] = [
+    { profileImage: "/profiles/profile2.svg", playerName: "Smo1derTv#6923", playerDescription: "I'm in the top 50 players in the world  / Caldera Trios World...", country: "Lebanon", kd: 5, orders: 955, rating: 5},
+    { profileImage: "/profiles/profile3.svg", playerName: "Smo1derTv#6923", playerDescription: "I'm in the top 50 players in the world  / Caldera Trios World...", country: "Lebanon", kd: 5, orders: 955, rating: 5},
+    { profileImage: "/profiles/profile4.svg", playerName: "Smo1derTv#6923", playerDescription: "I'm in the top 50 players in the world  / Caldera Trios World...", country: "Lebanon", kd: 5, orders: 955, rating: 5},
   ]
   return (
     <Wrapper>
@@ -59,6 +66,14 @@ const index = () => {
       <SubHeading text={"The Ultimate Platform for Gamers"} description={ultimatePlatformtext}/>
       <GameCardList gameList={gameCardsList} />
       <SubHeading text={"Pros on Demand"} description={prosOnDemandText}/>
+      <PlayerAdList players={playersList}/>
+      <Ad
+        imageSrc='/ggEraAd.jpg'
+        title='Join GG Era: Level Up Your Gaming Experience Today!'
+        description='Connect, collaborate, and level up with pros and creators. Enhance your skills, showcase your talent, and join the vibrant gaming community. Sign up now!'
+        buttonText='Join now'
+        onClick={() => {console.log('clicked')}}
+      />
     </Wrapper>
   )
 }
