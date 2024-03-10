@@ -1,6 +1,6 @@
-import styles from './PlayerAd.module.css'
+import { Box } from '@/styles/styledComponents'
 import Image from 'next/image'
-import styled from 'styled-components'
+import styles from './PlayerAd.module.css'
 
 export interface PlayerAdCardProps {
   playerName: string
@@ -13,19 +13,7 @@ export interface PlayerAdCardProps {
   onClick?: () => void
 }
 
-const Box= styled.div `
-  gap: 10px;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  &>div{
-    font-weight: 600;
-    padding: 4px 11px;
-    background: #4E4E4E;
-    border-radius: 5px;
-    height: 32px;
-  }
-`
+
 const PlayerAdCard = ({playerName, playerDescription, country, kd, orders, rating, profileImage, onClick}: PlayerAdCardProps) => {
   return (
       <div className={styles.slots}>

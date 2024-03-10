@@ -1,26 +1,15 @@
-import React from 'react'
-import MainHeading from '../../components/Headings/MainHeading'
-import { Wrapper } from '../../styles/styledComponents'
-import MainDescription from '../../components/MainDescription'
-import styled from 'styled-components'
-import PlayerCard from '../../components/PlayerCards/PlayerCard'
-import PlayerCardWrapper from '../../components/PlayerCards/PlayerCardWrapper'
-import SubHeading from '../../components/Headings/SubHeading'
-import GameCardList from '../../components/GameCards'
-import GameCards, { GameCardsProps } from '../../components/GameCards/GameCard'
+import Ad from '@/components/GGeraAd'
 import PlayerAdList from '@/components/PlayerAd'
 import { PlayerAdCardProps } from '@/components/PlayerAd/PlayerAdCard'
-import Ad from '@/components/GGeraAd'
+import GameCardList from '../../components/GameCards'
+import { GameCardsProps } from '../../components/GameCards/GameCard'
+import MainHeading from '../../components/Headings/MainHeading'
+import SubHeading from '../../components/Headings/SubHeading'
+import MainDescription from '../../components/MainDescription'
+import PlayerCard from '../../components/PlayerCards/PlayerCard'
+import PlayerCardWrapper from '../../components/PlayerCards/PlayerCardWrapper'
+import { FlexWrapper, Wrapper } from '../../styles/styledComponents'
 
-const FlexWrapper = styled.div`
-  display: flex;
-  gap: 16px;
-  margin-top: 38px;
-  & div:first-child {
-    padding-right: 16px;
-    border-right: 1px solid white;
-  }
-  `
 const index = () => {
   const ultimatePlatformtext = "Welcome to GG Era, the ultimate platform for gamers. Connect, collaborate, and level up with pros and creators from around the world. Whether you aspire to be a pro gamer or a content creator, GG Era provides a vibrant community where you can learn, grow, and showcase your skills. Play alongside top professionals, gain exclusive insights, and participate in thrilling collaborative gameplay sessions. Showcase your creativity, collaborate with like-minded creators, and build your brand. With access to training materials, workshops, and personalized coaching, you can enhance your skills and reach new heights. Join GG Era today and embark on an exciting journey of gaming, collaboration, and endless possibilities. The next level of gaming awaits you."
   const prosOnDemandText = "Unleash your gaming potential with personalized 1-1 coaching or by joining a premade party. Book now to elevate your skills and achieve extraordinary results in gaming!"

@@ -55,7 +55,7 @@ const Nav= styled.div`
 const NavBar = () => {
   const router = useRouter()
   const navBarElements = [
-  { name: 'Play with a Pro', path: '/play' },
+  { name: 'Play with a Pro', path: '/play-with-a-pro' },
   { name: 'Hangout', path: '/hangout' },
   { name: 'About', path: '/about' },
   { name: 'Blog', path: '/blog' },
