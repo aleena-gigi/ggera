@@ -4,6 +4,7 @@ import styles from './blog.module.css'
 
 interface BlogListProps {
     blogs: BlogCardProps[];
+    showButton?: boolean;
 }
 
 const Wrapper = styled.div`
@@ -15,7 +16,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `
-const BlogList = ({blogs}: BlogListProps) => {
+const BlogList = ({blogs, showButton = true}: BlogListProps) => {
   return (
     <>
       <Wrapper>
@@ -33,7 +34,7 @@ const BlogList = ({blogs}: BlogListProps) => {
             );
           })}
       </Wrapper>
-      <button className={styles.load}>Load More</button>
+      {showButton && <button className={styles.load}>Load More</button>}
     </>
   );
 }

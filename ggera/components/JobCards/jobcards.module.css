@@ -1,0 +1,20 @@
+.card{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 16px;
+    height: 485px;
+}
+.card img{
+    width: 456.77px;
+    height: 100%;
+}
+.card p{
+    line-height: 18px;
+    padding-top: 10px;
+}
+.card .title{
+    font-size: 48px;
+}

@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   font-weight: 500;
   line-height: 70px; 
   padding: 133px 250px 30px;
+  gap: 30px;
+  @media(min-width: 2000px){
+    padding: 133px 600px 30px;
+  }
 `
 
 export const FlexWrapper = styled.div`
